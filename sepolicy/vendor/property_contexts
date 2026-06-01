@@ -5,5 +5,5 @@ ro.vendor.qti.va_aosp.support    u:object_r:vendor_exported_system_prop:s0 exact
 vendor.dynamic_sensor.    u:object_r:vendor_dynamic_sensor_prop:s0
 
 # VT
-ro.vendor.vt_hevc_support                u:object_r:vendor_mtk_vendor_vt_prop:s0
+#ro.vendor.vt_hevc_support                u:object_r:vendor_mtk_vendor_vt_prop:s0
 ro.vendor.vt.mtk_thin_md_support_mode    u:object_r:vendor_mtk_vendor_vt_prop:s0
