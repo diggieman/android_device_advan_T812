@@ -94,7 +94,7 @@ $(call soong_config_set_bool,libgui,support_mtk_ged_kpi,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.3-service \
-    android.hardware.memtrack-service.mediatek-mali
+    android.hardware.memtrack-service.mediatek
 
 # DRM
 PRODUCT_PACKAGES += \
