@@ -46,12 +46,15 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc': blob_fixup()
         .regex_replace('@1.2-mediatek', '@1.2-mediatek-64b'),
     'vendor/lib64/hw/audio.primary.mediatek.so': blob_fixup()
+        .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libalsautils.so', 'libalsautils-v31.so'),
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
     'vendor/lib64/hw/mt6789/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so')
         .replace_needed('libutils.so', 'libutils-v32.so'),
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/mt6789/libmnl.so' : blob_fixup()
         .add_needed('libcutils.so'),
     'vendor/lib64/mt6789/libneuralnetworks_sl_driver_mtk_prebuilt.so': blob_fixup()
