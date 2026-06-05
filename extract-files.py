@@ -20,6 +20,7 @@ from extract_utils.main import (
 namespace_imports = [
     'device/advan/mt6789-common',
     'hardware/mediatek',
+    'hardware/mediatek/libmtkperf_client',
 ]
 
 

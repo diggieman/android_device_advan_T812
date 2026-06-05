@@ -885,6 +885,9 @@ on property:sys.boot_completed=1
     write /proc/midmisc_bootc 1
     write /proc/midmisc_v_bootc 1
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 #service dpfd /vendor/bin/dpfd
 #	user root
 #	group system media
