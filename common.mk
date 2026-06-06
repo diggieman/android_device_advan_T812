@@ -48,6 +48,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
 # Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
+$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl:64 \
