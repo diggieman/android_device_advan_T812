@@ -11,6 +11,7 @@ vendor.usbsph.ul.pcm.dump=0
 vendor.usbsph.srcaws.pcm.dump=0
 vendor.streamout.pcm.dump=0
 vendor.streamin.pcm.dump=0
+ro.audio.usb.period_us=16000
 
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac
