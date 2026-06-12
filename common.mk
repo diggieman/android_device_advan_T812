@@ -174,7 +174,9 @@ PRODUCT_PACKAGES += \
     SettingsResCommon \
     SystemUIResCommon \
     TelephonyResCommon \
-    WifiResCommon
+    WifiResCommon\
+    SettingsProviderOverlayDevice
+
     
 # Permissions
 PRODUCT_COPY_FILES += \
