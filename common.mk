@@ -77,6 +77,10 @@ $(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth-service.mediatek
 
+# FM Radio
+PRODUCT_PACKAGES += \
+    FMRadio
+
 # For updating preloader
 PRODUCT_PACKAGES += \
     create_pl_dev \

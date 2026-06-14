@@ -194,6 +194,7 @@ vendor/etc/init/hw/init.connectivity.common.rc
 vendor/etc/init/hw/init.connectivity.rc
 vendor/etc/init/hw/init_connectivity.rc
 vendor/etc/init/init.wmt_drv.rc
+vendor/etc/init/init.fmradio_drv.rc
 
 # Display
 vendor/bin/hw/mt6789/android.hardware.graphics.allocator@4.0-service-mediatek.mt6789;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
