@@ -35,3 +35,15 @@ persist.dbg.wfc_avail_ovr=1
 
 # Zygote
 zygote.critical_window.minute=10
+
+# Silence annoying logspam
+persist.log.tag.SurfaceControl=S
+persist.log.tag.BLASTBufferQueue=S
+
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
+# Test performance props
+persist.sys.activity_anim_perf_override=true
+persist.sys.perf.scroll_opt=true
+persist.sys.perf.scroll_opt.heavy_app=1
