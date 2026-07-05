@@ -59,13 +59,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.mt6789.usb.rc",
-    src: "etc/init/hw/init.mt6789.usb.rc",
-    sub_dir: "init/hw",
-    vendor: true
-}
-
-prebuilt_etc {
     name: "init.recovery.usb.rc",
     src: "etc/init.recovery.usb.rc",
     recovery: true,
