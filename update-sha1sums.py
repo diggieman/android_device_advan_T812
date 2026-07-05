@@ -20,7 +20,7 @@ import os
 import sys
 from hashlib import sha1
 
-device = 'mt6789-common'
+device = 'T812'
 vendor = 'advan'
 
 with open('proprietary-files.txt', 'r') as f:

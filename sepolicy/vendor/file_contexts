@@ -1,0 +1,3 @@
+# TEE
+/vendor/bin/tee_check_keybox                                                                u:object_r:tee_exec:s0
+#/(vendor|system/vendor)/bin/hw/android\.hardware\.security\.keymint-service\.trustkernel    u:object_r:hal_keymint_default_exec:s0

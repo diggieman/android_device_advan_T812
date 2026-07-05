@@ -1,2 +1,10 @@
 # Misc
 type proc_midmisc, fs_type, proc_type;
+
+# Gestures
+type proc_gestures, fs_type, proc_type;
+type sysfs_gestures, fs_type, sysfs_type;
+
+# Allow power HAL to write to touch gesture proc nodes
+allow hal_power_default proc_gestures:file w_file_perms;
+

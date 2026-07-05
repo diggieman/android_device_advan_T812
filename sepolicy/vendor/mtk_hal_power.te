@@ -1,0 +1,2 @@
+rw_dir_file(mtk_hal_power, proc_gestures)
+rw_dir_file(mtk_hal_power, sysfs_gestures)

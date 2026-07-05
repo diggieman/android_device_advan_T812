@@ -4,7 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/advan/mt6789-common
+DEVICE_PATH := device/advan/T812
+KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -63,7 +64,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default:64
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -159,6 +160,10 @@ PRODUCT_PACKAGES += \
     init.insmod.mt8781.cfg \
     init.mt8781.rc
 
+# Kernel
+PRODUCT_COPY_FILES += \
+    $(KERNEL_PATH)/Image.gz:kernel
+
 # Keymaster
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.keystore.app_attest_key.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.keystore.app_attest_key.xml
@@ -169,7 +174,7 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
@@ -178,10 +183,11 @@ PRODUCT_PACKAGES += \
     SettingsResCommon \
     SystemUIResCommon \
     TelephonyResCommon \
-    WifiResCommon\
-    SettingsProviderOverlayDevice
+    WifiResCommon \
+    SettingsProviderOverlayDevice \
+    ApertureResOverlayT812 \
+    FrameworksResOverlayT812
 
-    
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -232,13 +238,15 @@ PRODUCT_PACKAGES += \
     libpowerhalwrap_vendor:64
 
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/perf,$(TARGET_COPY_OUT_VENDOR)/etc)
+    $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/perf,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(DEVICE_PATH):libpowermode-ext-T812)
 
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Properties
-include $(LOCAL_PATH)/vendor_logtag.mk
+include $(DEVICE_PATH)/vendor_logtag.mk
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -247,7 +255,7 @@ PRODUCT_PACKAGES += \
     sensors.dynamic_sensor_hal
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+    $(DEVICE_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
@@ -256,17 +264,17 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 $(call soong_config_set_bool,android_hardware_mediatek_usb,audio_accessory_supported,true)
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek \
+    android.hardware.usb.gadget-service.mediatek
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
+    $(DEVICE_PATH) \
     hardware/mediatek \
     hardware/mediatek/wlan/wifi_hal \
     hardware/mediatek/libmtkperf_client \
     hardware/lineage/interfaces/power-libperfmgr \
     hardware/google/interfaces \
-    hardware/google/pixel \
+    hardware/google/pixel
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -280,12 +288,21 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
 # Wi-Fi
-$(call soong_config_set,wpa_supplicant_8,board_wlan_mediatek_stability,true)
+$(call soong_config_set_bool,wpa_supplicant_8,board_wlan_mediatek_stability,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
     hostapd \
     wpa_supplicant
 
+#
+# MindTheGapps
+#
+WITH_GMS ?= false
+
+ifeq ($(WITH_GMS),true)
+  $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+endif
+
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/advan/mt6789-common/mt6789-common-vendor.mk)
+$(call inherit-product, vendor/advan/T812/T812-vendor.mk)

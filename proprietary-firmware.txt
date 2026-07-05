@@ -1,0 +1,14 @@
+## All proprietary files from this list, unless pinned and noted otherwise, are
+## from T812_B15_V4.0L.7_20251208
+
+dpm.img;AB
+gz.img;AB
+lk.img;AB|9d3cf3893f6546039fc4cd23f4444e0a7fd3f914
+mcupm.img;AB
+md1img.img;AB
+pi_img.img;AB
+preloader_tb8781p1_64.bin:preloader_raw.img;AB
+scp.img;AB
+spmfw.img;AB
+sspm.img;AB
+tee.img;AB|6b5257b600c2754446e527ebd8890dc4d043326e
