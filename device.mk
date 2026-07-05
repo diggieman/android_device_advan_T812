@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek-recovery
 
 # IMS
-$(call inherit-product, vendor/mediatek/proprietary/ims/ims.mk)
+$(call inherit-product, vendor/mediatek/ims/ims.mk)
 
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
