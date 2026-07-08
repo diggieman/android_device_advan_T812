@@ -273,4 +273,15 @@
           config_defaultRefreshRate may be set to 0, in which case the value set for
           config_defaultPeakRefreshRate will act as the default frame rate. -->
      <integer name="config_defaultRefreshRate">0</integer>
+
+     <!-- Globally enable Desktop windowing logic -->
+     <bool name="config_isDesktopModeSupported">true</bool>
+
+     <!-- Whether the current device's internal display can host desktop sessions.  -->
+     <bool name="config_canInternalDisplayHostDesktops">true</bool>
+
+     <!-- Whether a display enters desktop mode by default when the windowing mode of the display's
+     root TaskDisplayArea is set to WINDOWING_MODE_FREEFORM. -->
+     <bool name="config_enterDesktopByDefaultOnFreeformDisplay">true</bool>
+
 </resources>
