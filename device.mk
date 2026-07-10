@@ -295,14 +295,5 @@ PRODUCT_PACKAGES += \
     hostapd \
     wpa_supplicant
 
-#
-# MindTheGapps
-#
-WITH_GMS ?= false
-
-ifeq ($(WITH_GMS),true)
-  $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-endif
-
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/advan/T812/T812-vendor.mk)
