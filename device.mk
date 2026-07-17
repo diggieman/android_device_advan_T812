@@ -110,6 +110,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ANGLE
 
+# HWUI
+TARGET_USES_VULKAN := true
+
 # DRM
 PRODUCT_PACKAGES += \
     com.android.hardware.drm.clearkey

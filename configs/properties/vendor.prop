@@ -40,7 +40,8 @@ ro.vendor.mtk_tee_gp_support=1
 ro.frp.pst=/dev/block/by-name/frp
 
 # Graphics
-ro.hardware.egl=meow
+debug.renderengine.backend=skiaglthreaded
+ro.hardware.egl=mali
 ro.hardware.gralloc=common
 ro.hardware.hwcomposer=mtk_common
 ro.hardware.vulkan=mali
