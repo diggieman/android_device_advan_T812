@@ -814,11 +814,6 @@ vendor/lib64/libforkexecwrap.so
 vendor/lib64/libifcutils_mtk.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
-# USB
-vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
-vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
-vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
-
 # Wi-Fi
 vendor/bin/wlan_assistant
 vendor/etc/init/init.wlan_drv.rc
@@ -2465,10 +2460,6 @@ vendor/lib64/hw/gatekeeper.trustkernel.so
 
 # Keymaster
 vendor/lib64/hw/kmsetkey.trustkernel.so
-
-# Media configs
-
-vendor/etc/media_profiles_V1_0.xml
 
 # TEE
 system/lib64/android.hardware.security.keymint-V3-ndk.so:vendor/lib64/android.hardware.security.keymint-V3-ndk-mtk.so;FIX_SONAME
