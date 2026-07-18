@@ -527,7 +527,7 @@ vendor/lib64/libladder.so
 vendor/bin/mt6789/v3avpud.mt6789;SYMLINK=vendor/bin/v3avpud
 vendor/etc/init/v3avpud.rc
 vendor/etc/seccomp_policy/mediaextractor.policy
-vendor/etc/seccomp_policy/mediaswcodec.policy
+
 vendor/lib/mt6789/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib/mt6789/libvcodec_utility.so;SYMLINK=vendor/lib/libvcodec_utility.so
 vendor/lib/mt6789/libvcodec_utility_v3a.so;SYMLINK=vendor/lib/libvcodec_utility_v3a.so
@@ -580,23 +580,18 @@ vendor/lib64/libvpu.so
 vendor/lib64/libvpu5.so
 
 # Media (C2)
-vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
-vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
+
 vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
-vendor/lib64/libcodec2_soft_mtk_alacdec.so
-vendor/lib64/libcodec2_soft_mtk_apedec.so
-vendor/lib64/libcodec2_soft_mtk_imaadpcmdec.so
-vendor/lib64/libcodec2_soft_mtk_mp3dec.so
-vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so
+
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
 vendor/lib64/libformatter.so:vendor/lib64/libformatter_mtk.so
 
 # Media configs
-vendor/etc/media_codecs_c2.xml
+
 vendor/etc/mtk_platform_codecs_config.xml
 
 # Mmagent
@@ -767,8 +762,7 @@ vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 
 # Seccomp policy
-vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy
-vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
+
 
 # Secure Element
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
@@ -2473,7 +2467,7 @@ vendor/lib64/hw/gatekeeper.trustkernel.so
 vendor/lib64/hw/kmsetkey.trustkernel.so
 
 # Media configs
-vendor/etc/media_codecs_performance.xml
+
 vendor/etc/media_profiles_V1_0.xml
 
 # TEE
