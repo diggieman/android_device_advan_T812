@@ -203,12 +203,8 @@ vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
-vendor/etc/meow.cfg
 vendor/lib/egl/egl.cfg
 
-vendor/lib64/egl/libMEOW_data.so
-vendor/lib64/egl/libMEOW_qt.so
-vendor/lib64/egl/libMEOW_trace.so
 vendor/lib64/hw/mt6789/android.hardware.graphics.allocator@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6789/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6789/gralloc.common.so;SYMLINK=vendor/lib64/hw/gralloc.common.so
@@ -316,7 +312,7 @@ vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/mt6789/libDR.so;SYMLINK=vendor/lib64/libDR.so
-vendor/lib64/mt6789/libmnl.so;SYMLINK=vendor/lib64/libmnl.so
+vendor/lib64/mt6789/libmnl_mtk.so;SYMLINK=vendor/lib64/libmnl_mtk.so
 vendor/lib64/lbs_hidl_service-impl.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
@@ -507,33 +503,7 @@ vendor/etc/MNL_Config.xml
 vendor/etc/slp_conf
 
 # IMS - from UP1A.231005.007
-system_ext/bin/vtservice|eeb08595c53be9d7a69ba5b677b5604f753eab37
-system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
-system_ext/framework/mediatek-common.jar|b4f57c8f65b92d8b65074911b626559107764bb5
-system_ext/framework/mediatek-framework.jar|73d22531a8cb342712e66333120b7e0f6615733c
-system_ext/framework/mediatek-ims-base.jar|a6f7ae937de5b9c25e41af8c15db2717a31a6e97
-system_ext/framework/mediatek-ims-common.jar|163657f0dea57218c55fc758fefa6eecf2edb8f6
-system_ext/framework/mediatek-ims-extension-plugin.jar|4562720d65136b189d661f248fd3170a749cada3
-system_ext/framework/mediatek-telecom-common.jar|247f6c23515d7336a857a749eba69ac63d4212f3
-system_ext/framework/mediatek-telephony-base.jar|018c0d93cd249e2bc0b3f865e2d3a946cf57a4cf
-system_ext/framework/mediatek-telephony-common.jar|9cdc9a9d04277c2fc74056f6b72ac3505701a238
-system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so|3ee0e7a7abf84b4dd99079beccbb81dfccfb920b
-system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME|5511822c30af7d219107947a86dca9eb1b66cb55|ad31d73629c5789751036b6c5a449407112168fd
-system_ext/lib64/libcomutils.so|fae6b5fd7628518eaf3e3eadac2133dd83f30839
-system_ext/lib64/libimsma.so|bd8b3a0ec18cb834206ec8aeba5d34cfdfa1b00d|5e5e4b00eeb442ab39e6126e08555836ba6ea910
-system_ext/lib64/libimsma_adapt.so|87682d1ecd12331841ce3b9f6eb04822a6725488
-system_ext/lib64/libimsma_rtp.so|25b249764ba9df7d89f3af209f38e4cb4993ddb3
-system_ext/lib64/libimsma_socketwrapper.so|5a26aae9eee36b9e5dc8875aa68b20ced2e1b676
-system_ext/lib64/libmtk_vt_service.so|340a3c2c63a9b0a05d57353ac5b75fd0cc11aae4
-system_ext/lib64/libmtk_vt_wrapper.so|4a59d2d0ea2a276afd478a5b5ea7b7ee06b3276a
-system_ext/lib64/libsignal.so|5595f5d7b6e7320572ec05ac199f951d141b516a
-system_ext/lib64/libsource.so|298093044c3e9896c2004124164897e7b9fc929a
-system_ext/lib64/libvcodec_cap.so|2a0b43f7e64115ce7eff027780c1374162b8461b
-system_ext/lib64/libvcodec_capenc.so|2a9dd2edc46a17f402f342f09035ba5c25bb7ea2
-system_ext/lib64/libvt_avsync.so|186a5263b1be36e3f5ba47c0e8b40bca48a6b382
-system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|e3bf2e0e02fc29048ff161a3884fc7614c6a092a
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|31594b914dae370731b2192fa891f12aac36a976
-system_ext/priv-app/ImsService/ImsService.apk|e2d3c7154ebe5ebc3594d4647d06d80fd1481cc7
+# REMOVED - USE COMMON IMS
 
 # Init
 vendor/bin/init.insmod.sh
@@ -623,7 +593,7 @@ vendor/lib64/libcodec2_soft_mtk_mp3dec.so
 vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so
 vendor/lib64/libcodec2_vpp_qt_plugin.so
 vendor/lib64/libcodec2_vpp_rs_plugin.so
-vendor/lib64/libformatter.so
+vendor/lib64/libformatter.so:vendor/lib64/libformatter_mtk.so
 
 # Media configs
 vendor/etc/media_codecs_c2.xml
@@ -690,20 +660,6 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Power
-vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
-vendor/etc/init/bootperf.rc
-vendor/etc/init/init.fpsgo.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
-vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
-vendor/etc/power_app_cfg.xml
-vendor/etc/powercontable.xml
-vendor/lib/libpowerhalwrap_vendor.so
-vendor/lib64/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
-vendor/lib64/libmtkperf_client_vendor.so
-vendor/lib64/libperfctl_vendor.so
-vendor/lib64/libpower_timer.so
-vendor/lib64/libpowerhal.so
-vendor/lib64/libpowerhalwrap_vendor.so
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
@@ -843,9 +799,7 @@ vendor/lib64/libgz_uree.so
 vendor/lib64/libthha.so
 
 # Thermal
-vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 vendor/bin/thermal_core
-vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
 vendor/etc/init/init.thermal_core.rc
 vendor/etc/thermal/disable_skin_control.conf
 vendor/etc/thermal/disable_thermal.conf
@@ -856,10 +810,6 @@ vendor/etc/thermal/thermal_mtbf.conf
 vendor/etc/thermal/thermal_policy_00.conf
 vendor/etc/thermal/thermal_policy_02.conf
 vendor/etc/thermal/thermal_policy_08.conf
-vendor/etc/fstb.cfg
-vendor/etc/mpe.conf
-vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
-vendor/lib64/hw/thermal_hal.so
 
 # Tether Offload
 vendor/bin/hw/tetheroffloadservice
