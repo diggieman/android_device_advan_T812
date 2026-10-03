@@ -183,10 +183,6 @@ vendor/lib64/libbluetooth_audio_session_mediatek.so
 # Camera
 vendor/lib64/libJpgEncPipe.so;DUMMY_SHARED_LIB
 
-# Chipinfo
-vendor/bin/chipinfo
-vendor/etc/init/chipinfo_init.rc
-
 # Connectivity
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
