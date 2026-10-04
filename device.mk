@@ -320,12 +320,13 @@ PRODUCT_PACKAGES += \
 # Wi-Fi
 $(call soong_config_set_bool,wpa_supplicant_8,board_wlan_mediatek_stability,true)
 $(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
-
 PRODUCT_PACKAGES += \
+    libwifi-hal-wrapper:64 \
     android.hardware.wifi-service \
+    wpa_supplicant \
     hostapd \
-    libwifi-hal-wrapper \
-    wpa_supplicant
+    libkeystore-wifi-hidl:64 \
+    libkeystore-engine-wifi-hidl:64
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/advan/T812/T812-vendor.mk)
