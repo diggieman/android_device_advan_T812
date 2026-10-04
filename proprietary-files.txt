@@ -814,6 +814,7 @@ vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 vendor/lib64/libwapi.so
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 
 # All blobs from sys_mssi_t_64_cn_armv82-user 15 AP3A.240905.015.A2 1739896298 release-keys, unless pinned
 # T812 specific proprietary files
@@ -2614,3 +2615,4 @@ vendor/firmware/novatek_ts_fw.bin:recovery/root/vendor/firmware/novatek_ts_fw.bi
 vendor/firmware/novatek_ts_fw_144.bin:recovery/root/vendor/firmware/novatek_ts_fw_144.bin
 vendor/firmware/novatek_ts_fw_jdi.bin:recovery/root/vendor/firmware/novatek_ts_fw_jdi.bin
 vendor/firmware/novatek_ts_fw_tm.bin:recovery/root/vendor/firmware/novatek_ts_fw_tm.bin
+
