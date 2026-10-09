@@ -1,9 +1,5 @@
 # All blobs from sys_mssi_t_64_cn_armv82-user 15 AP3A.240905.015.A2 1739896298 release-keys, unless pinned
 
-# AEE
-vendor/lib/libaedv.so
-vendor/lib64/libaedv.so
-
 # APU
 vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
 vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
