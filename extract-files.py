@@ -21,6 +21,7 @@ namespace_imports = [
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
     'hardware/mediatek/libaedv',
+    'hardware/mediatek/libion_mtk',
 ]
 
 
