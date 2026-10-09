@@ -266,11 +266,11 @@ vendor/lib64/mt6886/arm.graphics-V3-ndk.so:vendor/lib64/mt6789/arm.graphics-V3-n
 vendor/lib64/libarm_egl_properties_sysprop.so|a5b4216f63c4539a1a95379a38aee8c94bd39548
 vendor/lib64/libarm_gralloc_properties_sysprop.so|76e7e5f8d879afc15e17902c87acfb33fed9bef6
 vendor/lib64/liblibarm_mali_config_sysprops.so|eca4cde8c0b75288a8af6a63a2edb2b47f58b163
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
-vendor/lib64/mediadrm/libwvdrmengine.so
-vendor/lib64/liboemcrypto.so
-vendor/lib64/libtlcWidevineModularDrm.so
-vendor/lib64/libwvhidl.so
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|91d7c0996133556cb7f7c5d1b7e5d9e7f07b78b2
+vendor/lib64/mediadrm/libwvdrmengine.so|02bc32c5e2b3f69f488d8e11dc144edf22bb9479
+vendor/lib64/liboemcrypto.so|8bf48f8e3f8fed5ba5856f0640243a9fc7e44bde
+vendor/lib64/libtlcWidevineModularDrm.so|7a4bc49483373c9d8d55460b33454822fd1fde44
+vendor/lib64/libwvhidl.so|a236f6d94b0b7bd9abb50f71d2f7b805a385246e
 
 # Fuelgauge
 vendor/bin/fuelgauged
