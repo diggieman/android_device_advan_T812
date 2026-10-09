@@ -88,6 +88,9 @@ PRODUCT_PACKAGES += \
     create_pl_dev \
     create_pl_dev.recovery
 
+# Bypass Lock State for Fenrir
+$(call soong_config_set_bool,fastbootd,bypass_lock_state,true)
+
 # Boot control HAL
 PRODUCT_PACKAGES += \
     com.android.hardware.boot \
