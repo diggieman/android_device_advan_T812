@@ -9,6 +9,7 @@ KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+$(call soong_config_set,update_engine,map_vabc_in_recovery,true)
 
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS := \
